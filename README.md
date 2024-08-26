@@ -76,7 +76,7 @@ For information on deploying game servers, refer to [Deploying GameServers](http
               containers:
                 - image: registry.cn-hangzhou.aliyuncs.com/acs/minecraft-demo:1.12.2
                   name: minecraft
-        \`\`\`
+        ```
 
 
   - **DeployUnits Configuration**: Manage the list of DeployUnits by specifying the clusters to be treated as DeployUnits within the dashboard.
