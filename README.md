@@ -52,6 +52,7 @@ For information on deploying game servers, refer to [Deploying GameServers](http
 - **User Operations**:
   - **Label Configuration**: Set and update the project label key to ensure proper organization of GameServerSets.
   - **DeployUnit Management**: Add or remove clusters from the DeployUnits list to control where GameServerSets are deployed.
+
 ![image](https://github.com/user-attachments/assets/a97e891e-56a2-476a-8cb5-06ed4ab858fb)
 
 
@@ -106,6 +107,8 @@ For information on deploying game servers, refer to [Deploying GameServers](http
     - After writing or uploading a YAML file, users can:
       - **Download**: Save the YAML file to their system for backup or later use.
       - **Deploy**: Deploy the configured resource directly through the dashboard with a single click, making the process seamless and efficient.
+     
+    
 ![image](https://github.com/user-attachments/assets/9cdf030a-0ae4-4395-8990-f586b478c08c)
 
 ### Pages of Project
