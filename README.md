@@ -52,29 +52,32 @@ For information on deploying game servers, refer to [Deploying GameServers](http
       
     **Example YAML for GameServerSet**:
     
-      apiVersion: game.kruise.io/v1alpha1
-      kind: GameServerSet
-      metadata:
-        labels:
-          // The GameServerSets that have this lable can be recognized by Dashboard.
-          project-name: project-e
-        name: game-two
-        namespace: default
-      spec:
-        replicas: 5
-        updateStrategy:
-          rollingUpdate:
-            podUpdatePolicy: InPlaceIfPossible
-        gameServerTemplate:
-          reclaimPolicy: Delete
-          metadata:
-            labels:
-               // The GameServers that have this lable can be recognized by Dashboard.
-              project-name: project-e
-          spec:
-            containers:
-              - image: registry.cn-hangzhou.aliyuncs.com/acs/minecraft-demo:1.12.2
-                name: minecraft
+      \`\`\`yaml
+        apiVersion: game.kruise.io/v1alpha1
+        kind: GameServerSet
+        metadata:
+          labels:
+            # The GameServerSets that have this label can be recognized by the Dashboard.
+            project-name: project-e
+          name: game-two
+          namespace: default
+        spec:
+          replicas: 5
+          updateStrategy:
+            rollingUpdate:
+              podUpdatePolicy: InPlaceIfPossible
+          gameServerTemplate:
+            reclaimPolicy: Delete
+            metadata:
+              labels:
+                # The GameServers that have this label can be recognized by the Dashboard.
+                project-name: project-e
+            spec:
+              containers:
+                - image: registry.cn-hangzhou.aliyuncs.com/acs/minecraft-demo:1.12.2
+                  name: minecraft
+        \`\`\`
+
 
   - **DeployUnits Configuration**: Manage the list of DeployUnits by specifying the clusters to be treated as DeployUnits within the dashboard.
 - **User Operations**:
