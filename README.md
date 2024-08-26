@@ -52,6 +52,8 @@ For information on deploying game servers, refer to [Deploying GameServers](http
 - **User Operations**:
   - **Label Configuration**: Set and update the project label key to ensure proper organization of GameServerSets.
   - **DeployUnit Management**: Add or remove clusters from the DeployUnits list to control where GameServerSets are deployed.
+![image](https://github.com/user-attachments/assets/a97e891e-56a2-476a-8cb5-06ed4ab858fb)
+
 
 ### Project Page
 - **Purpose**: The Project Page within the OKG Dashboard serves as the central hub for organizing and managing the deployment of game servers across different logical groupings, referred to as projects. This page is designed to give users an in-depth view of all projects, allowing for efficient management and monitoring of resources across multiple DeployUnits.
@@ -71,6 +73,9 @@ For information on deploying game servers, refer to [Deploying GameServers](http
     - **Updating Container Images**: Roll out new container images across the project to deploy updated game server versions.
     - **Rolling Out New Configurations**: Implement new configurations or update existing ones to optimize performance.
     - **Batch and Item Actions**: Users can perform bulk operations, such as updating resources, deleting GameServers or GameServerSets, updating network policies, and modifying replicas.
+![image](https://github.com/user-attachments/assets/d2cf5b61-b96e-4f66-ab26-d4939b688187)
+
+
 
 ### DeployUnits Page
 - **Purpose**: The DeployUnits page serves as a centralized interface for viewing and managing all DeployUnits (Kubernetes clusters) within the OKG Dashboard. It provides a comprehensive overview of the deployment environment, enabling users to monitor the health and performance of their clusters and efficiently manage game server deployments across multiple DeployUnits.
@@ -86,6 +91,9 @@ For information on deploying game servers, refer to [Deploying GameServers](http
   - **Detailed DeployUnit Management**: By clicking on any DeployUnit, users can access a detailed overview of that specific cluster. This detailed view allows users to manage GameServers and GameServerSets within the selected DeployUnit, performing operations such as scaling, updating configurations, or troubleshooting issues.
   - **DeployUnit Configuration**: Users have the ability to add or remove DeployUnits from the OKG Dashboard’s management. This control allows users to define where game servers are deployed, enabling more precise management of their deployment environment.
 
+![image](https://github.com/user-attachments/assets/2417ece2-2018-480e-9a00-8780256a5ca6)
+
+
 ### Add Resource Page
 - **Purpose**: The Add Resource Page is designed to streamline the process of adding new Kubernetes resources within the OKG Dashboard. This page allows users to create and deploy resources like GameServerSets, GameServers, StatefulSets, or DaemonSets by either uploading an existing YAML file or creating a new one directly within the dashboard.
 - **User Operations**:
@@ -97,25 +105,58 @@ For information on deploying game servers, refer to [Deploying GameServers](http
     - After writing or uploading a YAML file, users can:
       - **Download**: Save the YAML file to their system for backup or later use.
       - **Deploy**: Deploy the configured resource directly through the dashboard with a single click, making the process seamless and efficient.
+![image](https://github.com/user-attachments/assets/9cdf030a-0ae4-4395-8990-f586b478c08c)
 
-### GameServerSet Table Page
-- **Purpose**: The GameServerSet Table Page provides a detailed view of all GameServerSets within a selected project. This page is designed for managing and monitoring the deployment of game servers at a granular level.
-- **Features**:
-  - **Comprehensive List**: View all GameServerSets within the selected project, with columns displaying key information such as replica count, update strategy, status, labels, and more.
-  - **Search and Filtering**: Use search and filtering tools to quickly locate specific GameServerSets based on criteria like name.
-  - **Batch Operations**: Perform batch operations on multiple GameServerSets like updating container images and deleting multiple GameServerSets.
-  - **Detail Navigation**: Click on any GameServerSet to view and edit its detailed configuration.
-  - **Resource Monitoring**: Monitor resource utilization and status, helping optimize server deployment.
+### Pages of Project
 
-### GameServer Table Page
-- **Purpose**: The GameServer Table Page allows users to manage individual GameServers within a GameServerSet, offering insights and controls at the most granular level of game server management.
-- **Features**:
-  - **Detailed View**: List all GameServers within a GameServerSet, providing critical information like server status, health checks, and logs.
-  - **Instance Control**: Start, stop, or restart individual GameServers.
-  - **Server Metrics**: View real-time metrics and logs to ensure optimal performance.
-  - **Dynamic Configuration**: Modify settings of individual GameServers, adapting to changes in server load or player demand.
+#### GameServerSet Table Page
 
+**Purpose**: The GameServerSet Table Page provides a detailed view of all GameServerSets within a selected project. This page is designed for managing and monitoring the deployment of game servers at a granular level.
 
+**Features**:
+- **Comprehensive List**: View all GameServerSets within the selected project, with columns displaying key information such as replica count, update strategy, status, labels, etc.
+- **Search and Filtering**: Use search and filtering tools to quickly locate specific GameServerSets based on criteria like name.
+- **Batch Operations**: Perform batch operations on multiple GameServerSets, like updating container images and deleting multiple GameServerSets.
+- **Item Operations**: Perform item operations on individual GameServerSets, like deleting a GameServerSet, updating container images, and updating replica count.
+
+**User Operations**:
+- **GameServerSet Management**: Select individual GameServerSets for detailed management, including scaling, updating, and rolling out new configurations.
+- **Batch Operations**: Execute batch operations across multiple GameServerSets to streamline updates and scaling.
+- **Search and Filter**: Use advanced search and filter options to quickly find and manage specific GameServerSets.
+
+![image](https://github.com/user-attachments/assets/39cf1690-e4c0-471c-9aca-163ae3aa5b12)
+  
+
+#### GameServer Table Page
+
+**Purpose**: The GameServer Table Page lists all individual GameServers within a selected project. This page allows for detailed management and monitoring of each GameServer instance.
+
+**Features**:
+- **GameServer List**: View a list of all GameServers within the selected context, with detailed information such as running status, resource usage, and operational status.
+- **Health and Status Monitoring**: Monitor the health and status of each GameServer.
+- **Instance-Level Control**: Manage each GameServer individually, with operations like restarting, updating, or deleting specific instances.
+
+**User Operations**:
+- **GameServer Management**: Perform detailed management of individual GameServers, including deleting servers, updating container images, updating network policies, and adjusting resource allocations.
+- **Monitoring and Troubleshooting**: Monitor the health of each GameServer and troubleshoot issues at the instance level.
+- **Search and Filter**: Use advanced search and filter options to quickly find and manage specific GameServerSets.
+
+**Batch Operations**:
+- **Users can perform batch operations on multiple GameServers simultaneously**, including:
+  - **Deleting GameServers**: Remove multiple GameServers in one action to streamline cleanup processes.
+  - **Updating Container Images**: Apply new container images to multiple GameServers at once.
+  - **Updating Operational State (opsState)**: Change the operational state of multiple GameServers to adjust their behavior or maintenance status.
+  - **Updating Resources**: Modify CPU and memory resources for multiple GameServers, with the option to:
+    - **Recreate Pods**: Select a checkbox to recreate pods with the updated configuration, ensuring that changes take effect.
+
+**Item Actions**:
+- For individual GameServers, users can:
+  - **Delete Specific GameServer**: Remove a single GameServer that is no longer required or is problematic.
+  - **Update Image**: Change the container image of a specific GameServer, applying new configurations or versions.
+
+![image](https://github.com/user-attachments/assets/66b2adf8-8f2b-4645-a501-c6e251a47d5b)
+
+  
 For detailed usage instructions, refer to [OKG Dashboard User Guide](https://openkruise.io/kruisegame/user-manuals).
 
 
