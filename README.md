@@ -58,8 +58,8 @@ For information on deploying game servers, refer to [Deploying GameServers](http
         metadata:
           labels:
             # The GameServerSets that have this label can be recognized by the Dashboard.
-            project-name: project-e
-          name: game-two
+            project-name: project-new
+          name: game-new
           namespace: default
         spec:
           replicas: 5
@@ -71,7 +71,7 @@ For information on deploying game servers, refer to [Deploying GameServers](http
             metadata:
               labels:
                 # The GameServers that have this label can be recognized by the Dashboard.
-                project-name: project-e
+                project-name: project-new
             spec:
               containers:
                 - image: registry.cn-hangzhou.aliyuncs.com/acs/minecraft-demo:1.12.2
