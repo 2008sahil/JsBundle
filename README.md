@@ -50,7 +50,8 @@ For information on deploying game servers, refer to [Deploying GameServers](http
   - **Project Label Key**: Define the label key used to identify which project a GameServerSet and Gameserver belongs to. This is crucial for organizing GameServerSets and GameServers across DeployUnits.
     - **Note**: Ensure that the project label key defined here matches the label key used when deploying GameServerSets. The project name in the GameServerSet YAML file should align with the configuration in the Global Configuration to ensure proper organization and functionality.
       
-       **Example YAML for GameServerSet**:
+    **Example YAML for GameServerSet**:
+    
       ![image](https://github.com/user-attachments/assets/ae3403ee-cb2d-4757-b30d-1bc76bd674b7)
       
       In this gameserverset **project-name** is the project label key. 
