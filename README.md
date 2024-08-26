@@ -52,7 +52,7 @@ For information on deploying game servers, refer to [Deploying GameServers](http
       
     **Example YAML for GameServerSet**:
     
-      \`\`\`yaml
+      ```yaml
         apiVersion: game.kruise.io/v1alpha1
         kind: GameServerSet
         metadata:
