@@ -73,6 +73,7 @@ For information on deploying game servers, refer to [Deploying GameServers](http
     - **Updating Container Images**: Roll out new container images across the project to deploy updated game server versions.
     - **Rolling Out New Configurations**: Implement new configurations or update existing ones to optimize performance.
     - **Batch and Item Actions**: Users can perform bulk operations, such as updating resources, deleting GameServers or GameServerSets, updating network policies, and modifying replicas.
+
 ![image](https://github.com/user-attachments/assets/d2cf5b61-b96e-4f66-ab26-d4939b688187)
 
 
