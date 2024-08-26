@@ -48,9 +48,11 @@ For information on deploying game servers, refer to [Deploying GameServers](http
 - **Purpose**: The Global Configuration page allows users to set up and manage the global settings that affect the entire OKG Dashboard. This includes defining project labels, configuring DeployUnits, and setting global policies.
 - **Features**:
   - **Project Label Key**: Define the label key used to identify which project a GameServerSet and Gameserver belongs to. This is crucial for organizing GameServerSets and GameServers across DeployUnits.
-    - **Important Note**: Ensure that the project label key defined here matches the label key used when deploying GameServerSets. The project name in the GameServerSet YAML file should align with the configuration in the Global Configuration to ensure proper organization and functionality.
+    - **Note**: Ensure that the project label key defined here matches the label key used when deploying GameServerSets. The project name in the GameServerSet YAML file should align with the configuration in the Global Configuration to ensure proper organization and functionality.
+      
        **Example YAML for GameServerSet**:
       ![image](https://github.com/user-attachments/assets/ae3403ee-cb2d-4757-b30d-1bc76bd674b7)
+      
       In this gameserverset **project-name** is the project label key. 
 
   - **DeployUnits Configuration**: Manage the list of DeployUnits by specifying the clusters to be treated as DeployUnits within the dashboard.
